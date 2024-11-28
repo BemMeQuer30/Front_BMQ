@@ -1,0 +1,193 @@
+/* src/components/OrderHistory.css */
+.order-history {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 80vh;
+  padding: 20px;
+}
+
+.order {
+  display: flex;
+  justify-content: space-between; /* Espaçamento entre texto e botão */
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff; /* Fundo branco para destaque */
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order:hover {
+  transform: scale(1.02); /* Efeito de crescimento ao passar o mouse */
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.order h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #0275d8;
+}
+
+.order p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #333; /* Cor mais escura para melhor legibilidade */
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: #999ad2;
+  height: 100%;
+}
+
+.order button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.order button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal h3 {
+  margin-top: 0;
+  font-size: 24px;
+  margin-bottom: 0px;
+  color: #333;
+}
+.modal h5 {
+  margin-top: 0;
+  font-size: 14px;
+  color: #333;
+}
+.modal p {
+  margin: 10px 0;
+  color: #666;
+}
+
+.modal img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.modal button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+  background-color: #0056b3;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.order-product-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-product-item:last-child {
+  border-bottom: none;
+}
+
+.order-product-item img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.order-product-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-product-details h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.order-product-details p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.status-pending {
+  background: orange;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  min-width: 150px;
+  color: white !important;
+}
+
+.status-completed {
+  background: #999ad2;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 150px;
+  color: white !important;
+}
+
+.status-canceled {
+  background: red;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 150px;
+  color: white !important;
+}
+
+.status-default {
+  background: gray;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  min-width: 150px;
+  color: white !important;
+}

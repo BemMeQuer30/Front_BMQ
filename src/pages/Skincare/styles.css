@@ -1,0 +1,26 @@
+.card-grid-items {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    minmax(200px, 1fr)
+  ); /* Ajuste para responsividade */
+  width: 80%;
+  gap: 16px;
+  min-height: 100vh;
+  margin: 0 auto; /* Centraliza a grade */
+}
+
+.box-header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 100px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+}
+
+.box-header h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333;
+}

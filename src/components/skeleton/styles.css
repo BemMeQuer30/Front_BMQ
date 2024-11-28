@@ -1,0 +1,33 @@
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  display: inline-block;
+  height: 20px;
+  width: 100%;
+  animation: pulse 1.5s infinite ease-in-out;
+  margin-bottom: 10px;
+}
+
+.skeleton.short {
+  width: 50%;
+}
+
+.skeleton.medium {
+  width: 75%;
+}
+
+.skeleton.long {
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

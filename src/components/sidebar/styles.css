@@ -1,0 +1,83 @@
+/* src/components/Sidebar.css */
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar nav ul li {
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  background-color: #444;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.avatar-group img {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.avatar-group h3 {
+  color: #fff;
+  margin: 0;
+}
+
+.img-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #444;
+  border-radius: 8px;
+}
+
+.img-group img {
+  width: 150px;
+  object-fit: contain;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+}
+
+.sidebar-footer button {
+  width: -webkit-fill-available;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background-color: #999ad2;
+  color: #ffffff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-footer button:hover {
+  background-color: #777;
+}

@@ -1,0 +1,34 @@
+body {
+  overflow-x: hidden;
+}
+/* Atualização do container para responsividade perfeita */
+.card-grid-items {
+  display: grid; /* Usando Grid Layout */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
+  gap: 20px; /* Espaçamento uniforme entre os cards */
+  padding: 20px;  
+}
+
+/* Estilo individual dos cards */
+.card-grid-items .card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  width: 100%; /* Garante que os cards ocupem 100% dentro da coluna */
+  transition: transform 0.3s ease;
+}
+
+/* Efeito de hover nos cards */
+.card-grid-items .card:hover {
+  transform: scale(1.05);
+}
+
+/* Media Query para telas muito pequenas (opcional, caso queira otimizar para <400px) */
+@media only screen and (max-width: 400px) {
+  .card-grid-items {
+    grid-template-columns: 1fr; /* Apenas uma coluna */
+  }
+}

@@ -1,0 +1,217 @@
+
+/* Tabela responsiva */
+.table-container {
+  width: 100%;
+  max-height: 100vh;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background-color: var(--accent-color);
+  color: var(--text-light);
+}
+
+.table td {
+  background-color: var(--background-light);
+}
+
+.table tr {
+  background
+}
+.table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Informações de usuário com avatar */
+.table .user-name {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* Paginação */
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  margin: 0 4px;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: var(--accent-color);
+}
+
+.pagination button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+.badge {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.badge::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%; /* Ajuste conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  padding: 5px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  font-size: 12px;
+}
+
+.badge:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.status-pendding {
+  background: orange;
+}
+
+.status-danger {
+  background-color: red;
+}
+
+.status-success {
+  background-color: #999ad2;
+}
+
+.status-warning {
+  background-color: orange;
+}
+
+.status-neutral {
+  background-color: gray;
+}
+
+.table-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-header h2{
+  color: var(--text-dark);
+}
+
+.table-header .add-button{
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--text-light);
+  transition: background-color 0.3s ease;
+}
+
+.table-header .add-button:hover{
+  background-color: var(--accent-color);
+}
+
+
+
+.action-button-edit,
+.action-button-delete {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 8px;
+}
+
+.action-button-edit {
+  background-color: #4caf50; /* Verde */
+  color: white;
+}
+
+.action-button-edit:hover {
+  background-color: #45a049; /* Verde escuro */
+}
+
+.action-button-delete {
+  background-color: #f44336; /* Vermelho */
+  color: white;
+}
+
+.action-button-delete:hover {
+  background-color: #e53935; /* Vermelho escuro */
+}
+
+/* src/components/OrderTable.css */
+.skeleton {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  display: inline-block;
+  height: 20px;
+  width: 100%;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeleton.short {
+  width: 50%;
+}
+
+.skeleton.medium {
+  width: 75%;
+}
+
+.skeleton.long {
+  width: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}

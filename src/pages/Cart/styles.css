@@ -1,0 +1,44 @@
+.container-cart {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  min-height: 100vh;
+  align-items: center;
+}
+
+.tabs {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.tabs button {
+  width: 45%;
+  padding: 10px 20px;
+  border: none;
+  background-color: #d3d3d3;
+  color: #000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tabs button.active {
+  background-color: #999ad2;
+  color: #fff;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 100%;
+  height: -webkit-fill-available;
+}
+.cart-item,
+.order {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
