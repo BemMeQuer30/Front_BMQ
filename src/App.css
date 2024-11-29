@@ -1,34 +1,287 @@
-body {
-  overflow-x: hidden;
-}
-/* Atualização do container para responsividade perfeita */
-.card-grid-items {
-  display: grid; /* Usando Grid Layout */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Colunas responsivas */
-  gap: 20px; /* Espaçamento uniforme entre os cards */
-  padding: 20px;  
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Estilo individual dos cards */
-.card-grid-items .card {
-  background-color: #fff;
-  border: 1px solid #ddd;
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Promo Section */
+.promo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  text-align: center;
+  color: white;
+}
+
+.promo-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.promo-copy {
+  font-size: 1.2rem;
+}
+
+.promo-link-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.promo-link {
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.promo-link:hover {
+  background-color: #0056b3;
+}
+
+/* Card Grid Responsivo com Flex */
+.card-grid-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-evenly;
+}
+
+/* Cards */
+.card-grid-items > * {
+  flex: 1 1 calc(33.333% - 1.5rem); /* 3 cards por linha em telas grandes */
+  max-width: calc(33.333% - 1.5rem);
+  min-width: 250px; /* Tamanho mínimo para cada card */
+  box-sizing: border-box;
+}
+
+/* Spinner */
+.spinner {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #007bff;
+  margin-top: 2rem;
+}
+
+/* Modal Responsivo */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background: white;
+  padding: 1.5rem;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsividade para diferentes dispositivos */
+
+/* Tela de Tablets (menor que 1024px) */
+@media (max-width: 1024px) {
+  .card-grid-items > * {
+    flex: 1 1 calc(50% - 1.5rem) !important; /* 2 cards por linha */
+    max-width: calc(50% - 1.5rem) !important;
+  }
+}
+
+/* Tela de Smartphones (menor que 768px) */
+@media (max-width: 768px) {
+  .promo-title {
+    font-size: 2rem;
+  }
+
+  .promo-copy {
+    font-size: 1rem;
+  }
+
+  .card-grid-items > * {
+    flex: 1 1 calc(50% - 1.5rem) !important; /* 2 cards por linha */
+    max-width: calc(50% - 1.5rem) !important;
+  }
+}
+
+/* Tela de Smartphones pequenos (menor que 480px) */
+@media (max-width: 480px) {
+  .promo-title {
+    font-size: 1.5rem;
+  }
+
+  .promo-copy {
+    font-size: 0.9rem;
+  }
+
+  .card-grid-items {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* 1 card por linha */
+    gap: 1rem !important;
+  }
+
+  .card-grid-items > * {
+    flex: 1 1 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo-container .logo {
+  max-width: 150px;
+  height: auto;
+}
+
+.navbar-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar .disabled {
+  color: #aaa;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.logout-button {
+  background-color: #ff5555;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.cart-icon img {
+  width: 30px;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer {
+  background-color: #f4f4f4;
   padding: 20px;
   text-align: center;
-  width: 100%; /* Garante que os cards ocupem 100% dentro da coluna */
-  transition: transform 0.3s ease;
+  border-top: 1px solid #ddd;
 }
 
-/* Efeito de hover nos cards */
-.card-grid-items .card:hover {
-  transform: scale(1.05);
+.footer-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
 }
 
-/* Media Query para telas muito pequenas (opcional, caso queira otimizar para <400px) */
-@media only screen and (max-width: 400px) {
-  .card-grid-items {
-    grid-template-columns: 1fr; /* Apenas uma coluna */
+.footer-section {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+
+.footer-links {
+  list-style: none;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.footer-links a:hover {
+  color: #007bff;
+}
+
+.social-icons img {
+  width: 30px;
+  height: auto;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-sections {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .navbar-container {
+    justify-content: flex-start;
+  }
+
+  .user-details {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
