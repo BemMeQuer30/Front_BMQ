@@ -28,6 +28,15 @@
   margin: 10px 0 5px; /* Margem entre a imagem e o título */
   text-align: center;
   color: #333;
+
+  /* Evitar a quebra de responsividade no titulo */
+  text-overflow: ellipsis;
+  width: 100%;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: auto;
 }
 
 .price {
