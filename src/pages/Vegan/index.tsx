@@ -65,8 +65,8 @@ const VeganPage: React.FC = () => {
           color: "#999ad2",
         }}
       >
-        Welcome to the vegan page. Here you will find a variety of vegan
-        products to suit your needs.
+        Bem-vindo à seção vegana. Aqui você encontra uma variedade de produtos
+        para atender às suas necessidades.
       </p>
 
       {isLoading ? (
