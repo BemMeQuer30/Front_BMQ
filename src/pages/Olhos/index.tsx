@@ -65,8 +65,8 @@ const OlhosPage: React.FC = () => {
           color: "#999ad2",
         }}
       >
-        Welcome to the olho page. Here you will find a variety of olho products
-        to suit your needs.
+        Bem-vindo à seção dedicada aos olhos. Aqui você encontra uma variedade de produtos
+        para atender às suas necessidades.
       </p>
 
       {isLoading ? (

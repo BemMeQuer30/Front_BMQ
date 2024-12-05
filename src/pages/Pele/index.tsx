@@ -65,8 +65,8 @@ const PelePage: React.FC = () => {
           color: "#999ad2",
         }}
       >
-        Welcome to the skin page. Here you will find a variety of skin products
-        to suit your needs.
+        Bem-vindo à seção Pele. Aqui você encontra uma variedade de produtos
+        para atender às suas necessidades
       </p>
 
       {isLoading ? (

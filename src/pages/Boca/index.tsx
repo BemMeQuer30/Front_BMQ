@@ -65,8 +65,9 @@ const BocaPage: React.FC = () => {
           color: "#999ad2",
         }}
       >
-        Welcome to the boca page. Here you will find a variety of boca products
-        to suit your needs.
+        Bem-vindo à seção boca. Aqui você encontrará uma variedade de produtos dedicados 
+        para boca e lábios
+        para atender às suas necessidades.
       </p>
 
       {isLoading ? (

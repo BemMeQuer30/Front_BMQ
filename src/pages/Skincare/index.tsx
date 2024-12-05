@@ -65,8 +65,8 @@ const SkincarePage: React.FC = () => {
           color: "#999ad2",
         }}
       >
-        Welcome to the skincare page. Here you will find a variety of skincare
-        products to suit your needs.
+        Bem-vindo à seção Skincare. Aqui você encontra uma variedade de produtos
+        para atender às suas necessidades
       </p>
 
       {isLoading ? (
