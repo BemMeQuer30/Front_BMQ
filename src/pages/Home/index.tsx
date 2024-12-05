@@ -81,7 +81,7 @@ const Home: React.FC = () => {
               </a>
               <a
                 aria-label="Get Started Link"
-                href="htmls/"
+                href="https://www.melumaquiagem.com.br/"
                 className="promo-link"
               >
                 Melu
