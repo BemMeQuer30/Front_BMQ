@@ -129,6 +129,12 @@ body {
     flex: 1 1 calc(50% - 1.5rem) !important; /* 2 cards por linha */
     max-width: calc(50% - 1.5rem) !important;
   }
+
+  body{
+  /* teste tirando o scroll horizontal */
+  overflow-x: hidden;
+  }
+
 }
 
 /* Tela de Smartphones pequenos (menor que 480px) */
@@ -153,7 +159,8 @@ body {
   }
 
   body{
-
+  /* teste tirando o scroll horizontal */
+  overflow-x: hidden;
   }
 }
 
@@ -280,6 +287,11 @@ body {
   .footer-section {
     text-align: center;
   }
+
+  body{
+  /* teste tirando o scroll horizontal */
+  overflow-x: hidden;
+  }
 }
 
 @media (max-width: 480px) {
@@ -297,4 +309,10 @@ body {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  body{
+  /* teste tirando o scroll horizontal */
+  overflow-x: hidden;
+  }
+  
 }
