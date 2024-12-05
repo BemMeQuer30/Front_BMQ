@@ -107,6 +107,12 @@ body {
     flex: 1 1 calc(50% - 1.5rem) !important; /* 2 cards por linha */
     max-width: calc(50% - 1.5rem) !important;
   }
+
+  body{
+    /* teste tirando o scroll horizontal */
+  overflow-x: hidden;
+  }
+  
 }
 
 /* Tela de Smartphones (menor que 768px) */
@@ -144,6 +150,10 @@ body {
   .card-grid-items > * {
     flex: 1 1 100% !important;
     max-width: 100% !important;
+  }
+
+  body{
+
   }
 }
 
