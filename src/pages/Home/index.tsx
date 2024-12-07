@@ -91,7 +91,7 @@ const Home: React.FC = () => {
         </div>
       </section>
       {isLoading ? (
-        <div className="spinner">Loading...</div>
+        <div className="spinner"></div>
       ) : (
         <div className="card-grid-items">
           {data.map((product) => (
