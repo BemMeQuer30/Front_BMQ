@@ -20,19 +20,19 @@ const Footer: React.FC = () => {
           <h4>Links Úteis</h4>
           <ul className="footer-links">
             <li>
-              <Link to="/about">Quem Somos</Link>
+              <Link to="https://www.melumaquiagem.com.br/pagina/sobre-a-melu">Quem Somos</Link>
             </li>
             <li>
-              <Link to="/faq">FAQ</Link>
+              <Link to="https://www.melumaquiagem.com.br/pagina/faq">FAQ</Link>
             </li>
             <li>
-              <Link to="/contact">Contato</Link>
+              <Link to="https://www.melumaquiagem.com.br/pagina/suporte-ao-cliente">Contato</Link>
             </li>
             <li>
-              <Link to="/terms">Termos de Uso</Link>
+              <Link to="https://www.melumaquiagem.com.br/pagina/sobre-a-melu">Termos de Uso</Link>
             </li>
             <li>
-              <Link to="/privacy">Política de Privacidade</Link>
+              <Link to="https://www.melumaquiagem.com.br/pagina/sobre-a-melu">Política de Privacidade</Link>
             </li>
           </ul>
         </div>
@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
               />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/bmqbeauty.b/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
