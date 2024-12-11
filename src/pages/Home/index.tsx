@@ -74,7 +74,7 @@ const Home: React.FC = () => {
             <div className="promo-link-group">
               <a
                 aria-label="Get Started Link"
-                href="htmls/"
+                href="https://www.melumaquiagem.com.br/pagina/sobre-a-melu"
                 className="promo-link"
               >
                 Ver mais
